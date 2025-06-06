@@ -5,14 +5,45 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pizza</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
 </head>
+<style>
+    .special {
+        background-color: gray;
+    }
+</style>
 <body>
-<div class="test" style="color: blue">
-    test
+<div>
+    <h3>Выбирите пиццу</h3>
+    <button onclick="selectPizza('Пепперони')">Пепперони</button>
+    <button onclick="selectPizza('Маргарита')">Маргарита</button>
+    <button onclick="selectPizza('Баварская')">Баварская</button>
+    <p id="Pizza"></p>
+    <br>
 </div>
 
-<script src="index.js"></script>
+<div>
+    <h3>Выбирите размер</h3>
+    <button onclick="selectSize('Маленькая')">Маленькая</button>
+    <button onclick="selectSize('Большая')">Большая</button>
+    <p id="Size"></p>
+</div>
+
+<div>
+    <br>
+    <h3>Добавить по вкусу</h3>
+    <button onclick="toggleTopping('сливочная моцарелла', this)">Сливочная моцарелла</button>
+    <button onclick="toggleTopping('сырный борт', this)">Сырный бортик</button>
+    <button onclick="toggleTopping('чедер и пармезан', this)">Чеддер и пармезан</button>
+</div>
+
+<div class="basket_button">
+    <br><br>
+    <button id="basket_button" style="font-size: 25px; background-color: orange; border-radius: 15px;">Добавить в корзину за  </button>
+    <br>
+</div>
+
+<script src="./index.js"></script>
 </body>
 </html>
